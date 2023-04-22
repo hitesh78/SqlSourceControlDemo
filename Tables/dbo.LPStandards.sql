@@ -1,0 +1,13 @@
+CREATE TABLE [dbo].[LPStandards]
+(
+[LPSID] [int] NOT NULL IDENTITY(1, 1),
+[LPID] [int] NOT NULL,
+[StandardID] [int] NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[LPStandards] ADD CONSTRAINT [PK_LPStandards] PRIMARY KEY CLUSTERED ([LPSID]) WITH (FILLFACTOR=95) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[LPStandards] ADD CONSTRAINT [FK_LPStandards_LessonPlans] FOREIGN KEY ([LPID]) REFERENCES [dbo].[LessonPlans] ([LPID]) ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[LPStandards] ADD CONSTRAINT [FK_LPStandards_Standards] FOREIGN KEY ([StandardID]) REFERENCES [dbo].[Standards] ([ID])
+GO

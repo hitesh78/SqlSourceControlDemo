@@ -1,0 +1,2 @@
+CREATE USER [katyas] WITHOUT LOGIN
+GO

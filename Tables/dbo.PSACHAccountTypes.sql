@@ -1,0 +1,8 @@
+CREATE TABLE [dbo].[PSACHAccountTypes]
+(
+[PSACHAccountTypeID] [int] NOT NULL,
+[PSACHAccountTypeName] [nvarchar] (256) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[PSACHAccountTypes] ADD CONSTRAINT [PK_PSACHAccountTypes] PRIMARY KEY CLUSTERED ([PSACHAccountTypeID]) WITH (FILLFACTOR=95) ON [PRIMARY]
+GO

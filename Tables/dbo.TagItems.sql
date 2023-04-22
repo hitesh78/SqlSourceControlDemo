@@ -1,0 +1,9 @@
+CREATE TABLE [dbo].[TagItems]
+(
+[TagID] [int] NOT NULL IDENTITY(1, 1),
+[TagTitle] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[TagSource] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[TagItems] ADD CONSTRAINT [PK_TagItems] PRIMARY KEY CLUSTERED ([TagID]) WITH (FILLFACTOR=95) ON [PRIMARY]
+GO

@@ -1,0 +1,2 @@
+CREATE USER [davidb] WITHOUT LOGIN
+GO

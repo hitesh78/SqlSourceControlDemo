@@ -1,0 +1,8 @@
+CREATE TABLE [dbo].[TermType]
+(
+[TypeID] [int] NOT NULL IDENTITY(1, 1),
+[TypeDesc] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[TermType] ADD CONSTRAINT [PK_TermType] PRIMARY KEY CLUSTERED ([TypeID]) ON [PRIMARY]
+GO
